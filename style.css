@@ -1,0 +1,69 @@
+/* styles.css */
+
+/* Style for the Copy Transcript Button */
+.copy-transcript-button {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin-left: 8px; /* Space between copy button and close button */
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.copy-transcript-button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* Style for the SVG Icon */
+.copy-transcript-button svg {
+    fill: #555555;
+    transition: fill 0.3s ease, transform 0.3s ease;
+    width: 20px;
+    height: 20px;
+}
+
+.copy-transcript-button:hover svg {
+    fill: #1a73e8; /* Change color on hover */
+    transform: rotate(10deg); /* Slight rotation on hover */
+}
+
+/* Style for the Success Notification */
+#copy-success-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(76, 175, 80, 0.95); /* Semi-transparent green background */
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 10000; /* Ensure it's on top */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+#copy-success-notification.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#copy-success-notification.fade-out {
+    opacity: 0;
+    transform: translateY(-40px);
+}
+
+/* Optional: Ensure the transcript panel has relative positioning */
+.transcript--transcript-panel--JLceZ {
+    position: relative;
+}
